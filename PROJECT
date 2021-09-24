@@ -1,0 +1,7 @@
+domain: acme.com
+repo: github.com/lander2k2/acme-namespace-operator
+resources:
+- group: tenancy
+  kind: AcmeNamespace
+  version: v1alpha1
+version: "2"

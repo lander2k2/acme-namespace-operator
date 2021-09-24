@@ -1,0 +1,20 @@
+# permissions for end users to view acmenamespaces.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: acmenamespace-viewer-role
+rules:
+- apiGroups:
+  - tenancy.acme.com
+  resources:
+  - acmenamespaces
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - tenancy.acme.com
+  resources:
+  - acmenamespaces/status
+  verbs:
+  - get

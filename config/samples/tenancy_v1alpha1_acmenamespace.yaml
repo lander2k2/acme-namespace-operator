@@ -1,0 +1,8 @@
+apiVersion: tenancy.acme.com/v1alpha1
+kind: AcmeNamespace
+metadata:
+  name: acmenamespace-sample
+spec:
+  namespaceName: app-y
+  adminUsername: sam
+

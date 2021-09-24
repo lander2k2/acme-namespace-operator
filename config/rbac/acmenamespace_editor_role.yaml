@@ -1,0 +1,24 @@
+# permissions for end users to edit acmenamespaces.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: acmenamespace-editor-role
+rules:
+- apiGroups:
+  - tenancy.acme.com
+  resources:
+  - acmenamespaces
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - tenancy.acme.com
+  resources:
+  - acmenamespaces/status
+  verbs:
+  - get
